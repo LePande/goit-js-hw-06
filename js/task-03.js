@@ -18,7 +18,7 @@ images.forEach(function (image) {
   const createImage = document.createElement("img");
 
   createLi.style.display = "flex";
-
+  createLi.style.flexDirection = "column";
   createLi.style.justifyContent = "center";
   createLi.style.alignItems = "center";
   createLi.style.fontWeight = "800";
@@ -39,6 +39,4 @@ images.forEach(function (image) {
   imagesPrint.style.listStyle = "none";
   imagesPrint.style.color = "#666d44";
   imagesPrint.style.padding = "0";
-
-  console.log(createLi);
 });
