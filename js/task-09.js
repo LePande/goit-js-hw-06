@@ -5,8 +5,17 @@ function getRandomHexColor() {
 }
 
 const BodySelector = document.querySelector("body");
-
+const classSelector = document.querySelector("span.color");
 const btnSelector = document.querySelector(".change-color");
+
 btnSelector.addEventListener("click", (e) => {
-  BodySelector.style.backgroundColor = getRandomHexColor();
+  const RandomColor = getRandomHexColor();
+
+  BodySelector.style.backgroundColor = RandomColor;
+  classSelector.textContent = RandomColor;
+  classSelector.style.backgroundColor = "#000000";
+  classSelector.style.color = RandomColor;
+  classSelector.style.fontWeight = 800;
+  classSelector.style.padding = "20px";
+  classSelector.style.borderRadius = "10px";
 });
